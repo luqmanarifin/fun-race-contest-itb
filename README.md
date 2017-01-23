@@ -8,5 +8,5 @@ expected difficulty (dari yang tergampang):
 - tugas-akhir-1
 - tugas-akhir-2
 - peta-siduy
-- akb38
+- akb48
 - minesweeper-1d
