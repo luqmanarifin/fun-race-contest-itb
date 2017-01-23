@@ -1,0 +1,17 @@
+Skeleton
+Ada peta 2D, N baris M kolom. 
+Karakter * artinya tembok (gabisa dilewatin)
+Karakter S artinya siduy
+Karakter F artinya fariza
+Karakter . artinya jalan bisa dilewatin
+berapa jarak terdekat antara S dan F. -1 kalo ga bakal bisa ketemu
+
+Format Input
+baris pertama N, M
+N baris berikutnya M karakter. peta
+
+Format Output
+jarak terdekat antara S dan F
+
+Batasan
+1 <= N, M <= 1.000

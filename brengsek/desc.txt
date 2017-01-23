@@ -1,0 +1,14 @@
+Skeleton
+dikasih N angka A0, A1, A2, sama batas X. berapa banyak angka yang kalau dijumlah, hasilnya <= X.
+
+Format input
+baris pertama N, X
+baris kedua array A berisi N bilangan
+
+Format output
+satu baris. banyak angka yang kalau dijumlah hasilnya <= X
+
+Batasan
+1 <= N <= 100
+0 <= X <= 1.000
+0 <= Ai <= 100

@@ -1,0 +1,17 @@
+Skeleton
+Ada string S. isinya minesweeper 1D.
+* artinya bom
+0 artinya tidak ada bom 
+1 artinya ada 1 bom di sebelah
+2 artinya ada 2 bom di sebelah
+? artinya kita tidak tahu.
+ada berapa banyak minesweeper yang valid? modulo 1e9+7
+
+Format Input
+string S
+
+Format Output
+banyak minesweeper yang valid modulo 1e9+7
+
+Batasan
+1 <= |S| <= 300.000

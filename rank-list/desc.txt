@@ -1,0 +1,17 @@
+Skeleton
+ada N pair of number, melambangkan satu tim solve berapa (Vi) dan berapa penalti timenya (Ti) dalam sebuah kontes pemrograman.
+ada Q query. setiap query ada integer Ki. berapa banyak tim yang shared posisi ke K-i
+
+Format Input
+baris pertama N, Q
+N baris berikutnya Vi, Ti
+kemudian satu baris, Q bilangan Ki
+
+Format Output
+Q baris bilangan, isinya jawaban
+
+Batasan
+1 <= N <= 300.000
+1 <= Q <= 300.000
+1 <= Vi <= 1.000
+1 <= Ti <= 1.000

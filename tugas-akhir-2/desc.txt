@@ -1,0 +1,22 @@
+Skeleton
+dikasih tree 1-based dengan node N rootnya 1. masing-masing node punya warna Ci.
+ada q query isinya node Xi dan warna Vi. berapa banyak node dari subtree node Xi yang warnanya Vi
+
+Format Input
+baris pertama N
+baris kedua N bilangan Ci
+N-1 baris bilangan U, V (tree)
+baris ketiga Q
+Q baris kemudian Xi, Vi
+
+Format Output
+Q baris bilangan, isinya jawaban
+
+Batasan
+1 <= N <= 1.000
+1 <= U, V <= N
+1 <= Ci <= 1.000
+1 <= Q <= 100.000
+1 <= Xi <= N
+1 <= Vi <= 1.000
+graf dijamin tree

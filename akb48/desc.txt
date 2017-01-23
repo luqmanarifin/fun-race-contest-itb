@@ -1,0 +1,21 @@
+Skeleton
+ada array A berisi N bilangan.
+ada 2 jenis query:
+1. Xi Vi, indeks ke-Xi diganti menjadi Vi (Vi yang baru selalu lebih besar dari sebelumnya)
+2. Xi, outputin berapa nilai maksimum indeks 1..Xi
+
+Format Input
+baris pertama N
+baris kedua A berisi N bilangan
+baris ketiga Q
+Q baris berikutnya, isinya query kyk di atas
+
+Format Output
+T baris isinya jawaban query. T adalah banyak query 2
+
+Batasan
+1 <= N <= 300.000
+1 <= Ai <= 1.000.000.000
+1 <= Xi <= N
+1 <= Vi <= 1.000.000.000
+(Vi yang baru selalu lebih besar dari sebelumnya)

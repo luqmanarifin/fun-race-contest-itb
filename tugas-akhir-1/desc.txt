@@ -1,0 +1,16 @@
+Skeleton
+Ada satu string S. 
+kalau nemu kata TA, scorenya 2.
+kalau nemu kata GTA, scorenya 3.
+kalau nemu kata DOTA, scorenya 4.
+score yang didapet = perkalian dari seluruh score dari kata yang didapet.
+berapa banyak score amksimum yang didapet? mod-in 1e9+7
+
+Format Input
+satu baris string S
+
+Format Output
+satu angka, jawaban
+
+Batasan
+1 <= |S| <= 100.000
