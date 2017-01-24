@@ -4,6 +4,7 @@ Karakter * artinya tembok (gabisa dilewatin)
 Karakter S artinya siduy
 Karakter F artinya fariza
 Karakter . artinya jalan bisa dilewatin
+jalan hanya bisa ke 4 arah.
 berapa jarak terdekat antara S dan F. -1 kalo ga bakal bisa ketemu
 
 Format Input

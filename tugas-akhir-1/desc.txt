@@ -3,6 +3,7 @@ Ada satu string S.
 kalau nemu kata TA, scorenya 2.
 kalau nemu kata GTA, scorenya 3.
 kalau nemu kata DOTA, scorenya 4.
+score awal = 1.
 score yang didapet = perkalian dari seluruh score dari kata yang didapet.
 satu huruf hanya bisa belong ke salah satu kata. gabisa dipake 2 kali.
 berapa banyak score amksimum yang didapet? mod-in 1e9+7
@@ -15,3 +16,4 @@ satu angka, jawaban
 
 Batasan
 1 <= |S| <= 100.000
+karakter S hanya 'A' sampe 'Z'
