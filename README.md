@@ -3,8 +3,8 @@ Problemset for Fun Race Contest ITB.
 
 expected difficulty (dari yang tergampang):
 - brengsek
-- rank-list
 - bigmod
+- rank-list
 - tugas-akhir-1
 - tugas-akhir-2
 - peta-siduy
