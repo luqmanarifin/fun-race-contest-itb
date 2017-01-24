@@ -24,6 +24,7 @@ int main() {
   scanf("%s", s);
   int n = strlen(s);
   dp[0][0] = dp[0][2] = dp[0][4] = 1;
+  clear(0);
   for (int i = 1; i < n; i++) {
     dp[i][0] += dp[i-1][0];
     dp[i][0] += dp[i-1][1];
@@ -35,6 +36,7 @@ int main() {
     dp[i][4] += dp[i-1][3];
     dp[i][4] += dp[i-1][4];
     for (int j = 0; j < 5; j++) dp[i][j] %= mod;
+    clear(i);
   }
   long long ans = (dp[n-1][0] + dp[n-1][1] + dp[n-1][4]) % mod;
   cout << ans << endl;
