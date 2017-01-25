@@ -6,7 +6,7 @@ Format Input
 baris pertama N
 baris kedua N bilangan Ci
 N-1 baris bilangan U, V (tree)
-baris ketiga Q
+1 baris kemudian Q
 Q baris kemudian Xi, Vi
 
 Format Output
