@@ -3,14 +3,15 @@
 
 using namespace std;
 
-string folder_name = "bigmod";
+string folder_name;
 
 bool endsWith(const string& s, const string& suffix)
 {
     return s.rfind(suffix) == (s.size()-suffix.size());
 }
 
-int main() {
+int main(int argc, char** argv) {
+  folder_name = (string) argv[1];
   DIR *dir;
   struct dirent *ent;
   system("mkdir tc/input tc/output");
