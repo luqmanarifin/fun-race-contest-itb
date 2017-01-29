@@ -138,10 +138,18 @@ private:
     }
 
     void randomTree(){
-        for(int i = 2;i <= N; ++i){
-            U.push_back(i);
-            V.push_back(rnd.nextInt(1, i-1));
+
+        vector<int> ve;
+        for(int i = 1;i <= N; ++i) ve.push_back(i);
+        random_shuffle(ve.begin(),ve.end());
+
+        for(int i = 1;i < N; ++i){
+            U.push_back(ve[i]);
+            V.push_back(ve[rnd.nextInt(0, i-1)]);
+            if(rnd.nextInt(6) > 4) swap(U.back(), V.back());
         }
+
+        ve.clear();
         if(N == 1) return;
         int n_shuf = rnd.nextInt(0, N);
         for(int i = 0; i < n_shuf; ++i){
@@ -156,11 +164,29 @@ private:
     }
 
     void linearTree(){
-        for(int i = 2;i <= N; ++i){
-            U.push_back(i);
-            V.push_back(i-1);
+
+        vector<int> ve;
+        for(int i = 1;i <= N; ++i) ve.push_back(i);
+        random_shuffle(ve.begin(),ve.end());
+        for(int i = 1;i < N; ++i){
+            U.push_back(ve[i-1]);
+            V.push_back(ve[i]);
             if(rnd.nextInt(6) > 4) swap(U.back(), V.back());
         }
+        ve.clear();
+        
+        if(N == 1) return;
+        int n_shuf = rnd.nextInt(0, N);
+        for(int i = 0; i < n_shuf; ++i){
+            int idx_1 = rnd.nextInt(0, N-2);
+            int idx_2 = rnd.nextInt(0, N-2);
+            swap(U[idx_1], U[idx_2]);
+            swap(V[idx_1], V[idx_2]);
+            if(rnd.nextInt(3)){
+                swap(U[idx_1], V[idx_1]);
+            }
+        }
+
     }
     void randomQuery(){
         vector<int> ve(C);
