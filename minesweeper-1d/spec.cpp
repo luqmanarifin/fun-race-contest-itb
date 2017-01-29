@@ -66,10 +66,12 @@ class TestSpec : public BaseTestSpec<ProblemSpec> {
 			CASE(N = MAX_LEN; randomValid());
 			CASE(N = 10000; randomValid());
 			CASE(N = 1000; randomValid());
+			CASE(N = 5; randomValid());
+			CASE(N = 10; randomValid());
+			CASE(N = 100; randomValid());
+			CASE(N = 12312; randomValid());
 			CASE(N = MAX_LEN; randomInvalid());
 			CASE(N = 5; randomInvalid());
-			CASE(N = 4; randomInvalid());
-			CASE(N = 1000; randomInvalid());
 			CASE(N = 10000; randomInvalid());
 			CASE(N = 100000; allZero());
 			CASE(N = 100000; allAsterisk());
