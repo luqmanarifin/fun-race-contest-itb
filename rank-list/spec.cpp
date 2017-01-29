@@ -80,17 +80,16 @@ protected:
         
         CASE(N = MAX_N; Q = MAX_Q; randomArray(); allQuery());
         CASE(N = MAX_N; Q = MAX_Q; randomArray(10, 10); allQuery());
+        CASE(N = MAX_N; Q = MAX_Q; randomArray(1000, 10); allQuery());
+        CASE(N = 10000; Q = 10000; randomArray(10, 70); allQuery());
         CASE(N = 100; Q = 100; randomArray(10, 10); allQuery());
         CASE(N = 10000; Q = 10000; randomArray(100, 100); allQuery());
 
-        CASE(N = 1; Q = 1; uniqueArray(10,10); randomQuery());
         CASE(N = 10; Q = 10; uniqueArray(); allQuery());
         CASE(N = 299209; Q = 10; allArray(547, 547); randomQuery());
         
         CASE(N = MAX_N; Q = MAX_Q; uniqueArray(); allQuery());
         CASE(N = 100; Q = 100; allArray(10, 10); uniqueQuery());
-        CASE(N = 10000; Q = 10000; uniqueArray(100, 100); randomQuery());
-        CASE(N = MAX_N; Q = 10000; allArray(600, 500); uniqueQuery());
         CASE(N = MAX_N; Q = MAX_Q; allArray(600, 500); allQuery());
         CASE(N = 299209; Q = 299209; allArray(547, 547); allQuery());
 
