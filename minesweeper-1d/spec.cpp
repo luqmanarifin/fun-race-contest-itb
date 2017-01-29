@@ -55,6 +55,9 @@ class TestSpec : public BaseTestSpec<ProblemSpec> {
 			Output({"8"});
 		}
 
+		void BeforeTestCase(){
+			s = "";
+		}
 		void TestCases(){
 			CASE(N = 1; allZero());
 			CASE(N = 1; allAsterisk());
@@ -73,6 +76,7 @@ class TestSpec : public BaseTestSpec<ProblemSpec> {
 			CASE(N = MAX_LEN; randomInvalid());
 			CASE(N = 5; randomInvalid());
 			CASE(N = 10000; randomInvalid());
+			CASE(N = 100000; randomInvalid());
 			CASE(N = 100000; allZero());
 			CASE(N = 100000; allAsterisk());
 		}
@@ -80,26 +84,21 @@ class TestSpec : public BaseTestSpec<ProblemSpec> {
 	private:
 
 		void allZero(){
-			s = "";
 			for(int i = 0;i < N; ++i) s += "0";
 		}
 
 		void allAsterisk(){
-			s = "";
 			for(int i = 0;i < N; ++i) s += "*";
 		}
 		void allOne(){
-			s = "";
 			for(int i = 0;i < N; ++i) s += "1";
 		}
 
 		void allTwo(){
-			s = "";
 			for(int i = 0;i < N; ++i) s += "2";
 		}
 
 		void randomValid(){
-			s = "";
 			for(int i = 0;i < N; ++i) s += "?";
 			int banyak = rnd.nextInt(N);
 			for(int i = 0;i < banyak; ++i){
@@ -128,13 +127,16 @@ class TestSpec : public BaseTestSpec<ProblemSpec> {
 		}
 
 		void randomInvalid(){
-			s = "";
-			for(int i = 0 ;i < N; ++i) s += "?";
-			int banyak = rnd.nextInt(N);
-			for(int i = 0;i < banyak; ++i){
-				s[rnd.nextInt(N)] = '*';
+			if(rnd.nextInt(3)){
+				randomValid();
 			}
-
+			else{
+				for(int i = 0 ;i < N; ++i) s += "?";
+				int banyak = rnd.nextInt(N);
+				for(int i = 0;i < banyak; ++i){
+					s[rnd.nextInt(N)] = '*';
+				}
+			}
 			//mulai bikin invalid
 			if(rnd.nextInt(6) > 4){
 				s[0] = '2';
