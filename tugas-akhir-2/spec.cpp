@@ -11,7 +11,7 @@ protected:
     int Q;
     vector<int> X, W;
     vector<int> result;
-    const int MAX_N = 1000, MAX_Q = 100000, MAX_C = 1000;
+    const int MAX_N = 1000, MAX_Q = 1000000, MAX_C = 1000;
 
     void InputFormat() {
         LINE(N);
@@ -91,9 +91,9 @@ protected:
         CASE(N = MAX_N; Q = MAX_Q; randomColor(); randomTree(); randomQuery());
         CASE(N = MAX_N; Q = 1; randomColor(); randomTree(); randomQuery());
         CASE(N = MAX_N; Q = 1000; randomColor(); randomTree(); randomQuery());
-        CASE(N = MAX_N; Q = MAX_Q; randomColor(); linearTree(); randomQuery()); 
-        CASE(N = MAX_N; Q = 1000; randomColor(); linearTree(); randomQuery()); 
-        CASE(N = MAX_N; Q = MAX_Q; randomColor(); linearTree(); allExistedColorQuery()); 
+        CASE(N = MAX_N; Q = MAX_Q; randomColor(); linearTree(); randomQuery());
+        CASE(N = MAX_N; Q = 1000; randomColor(); linearTree(); randomQuery());
+        CASE(N = MAX_N; Q = MAX_Q; randomColor(); linearTree(); allExistedColorQuery());
 
         CASE(N = MAX_N; Q = MAX_Q; allSameColor(); linearTree(); randomQuery());
         CASE(N = MAX_N; Q = MAX_Q; allSameColor(); randomTree(); randomQuery());
@@ -122,7 +122,7 @@ private:
     void randomColor(){
         for(int i = 0;i < N; ++i) C.push_back(rnd.nextInt(1, MAX_C));
     }
-    
+
     void allSameColor(){
         int clr = rnd.nextInt(1, MAX_C);
         for(int i = 0;i < N; ++i) C.push_back(clr);
@@ -174,7 +174,7 @@ private:
             if(rnd.nextInt(6) > 4) swap(U.back(), V.back());
         }
         ve.clear();
-        
+
         if(N == 1) return;
         int n_shuf = rnd.nextInt(0, N);
         for(int i = 0; i < n_shuf; ++i){
