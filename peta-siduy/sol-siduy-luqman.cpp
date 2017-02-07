@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int N = 1005;
+const int N = 3005;
 const int inf = 1e9;
 
 char s[N][N];
