@@ -13,7 +13,7 @@ typedef pair<int,int> pii;
 class ProblemSpec : public BaseProblemSpec{
 protected:
 	int R, C;
-	const int MAX_R = 1000, MAX_C = 1000;
+	const int MAX_R = 3000, MAX_C = 3000;
 	vector<vector<char> > V;
 	int result;
 	void InputFormat(){
@@ -218,7 +218,7 @@ private:
 						}
 						else{
 							if(j&1) vc.push_back('*');
-							else vc.push_back('.');	
+							else vc.push_back('.');
 						}
 					}
 				}
@@ -243,7 +243,7 @@ private:
 						}
 						else{
 							if(i&1) vc.push_back('*');
-							else vc.push_back('.');	
+							else vc.push_back('.');
 						}
 					}
 				}
@@ -281,7 +281,7 @@ private:
 				V[r_rand][c_rand] = '.';
 			}
 		}
-	}	
+	}
 	void snakeInvalid(){
 		snake();
 		for(int i = 0;i < 5; ++i){
@@ -342,7 +342,7 @@ private:
 		}
 	}
 	void zigZagValid(){
-		
+
 		zigZag();
 		if(rnd.nextInt(4)){
 			for(int i = 0;i < 5; ++i){
